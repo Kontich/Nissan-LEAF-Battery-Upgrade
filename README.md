@@ -57,6 +57,10 @@ Nothing 	- J2
 
 ![alt text](https://github.com/dalathegreat/Nissan-LEAF-Battery-Upgrade/blob/main/Software/CANBRIDGE-2port/FlashingInstr.jpg)
 
+#### Notes on Official ST-LINK/V2
+If you are using the original white plastic case ST link flasher, Make sure to join VDD pins and VAPP pins to a common 3.3v+ jumper and it should work
+
+<img width="1131" height="522" alt="image" src="https://github.com/user-attachments/assets/389f9363-39c1-4e15-847b-3cb8993451e2" />
 
 ## Wiring in the hardware
 When installing the 2-port into the vehicle, here are the wiring instructions. Note the colors of the wires coming from the CAN bridge can vary depending on production date. It is best to go via labels from the backside of the bridge instead.
