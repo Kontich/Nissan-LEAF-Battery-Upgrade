@@ -280,7 +280,7 @@ void can_handler(uint8_t can_bus, CAN_FRAME *frame)
   						startup_counter_1DB = 1000; //skip instrumentation cluster fix when starting charge session, to prevent disrupting charge
   					}
   				}
-				if (startup_counter_1DB >= 100 && startup_counter_1DB <= 300) // Between 1s and 3s after poweron
+				if (startup_counter_1DB >= 100 && startup_counter_1DB <= 300 && 0) // disable
 				{
 					frame->data[3] = (frame->data[3] | 0x10); // Set the full charge flag to ON during startup
 				}											// This is to avoid instrumentation cluster scaling bars incorrectly
@@ -499,7 +499,7 @@ void can_handler(uint8_t can_bus, CAN_FRAME *frame)
                     swap_5bc_remaining.LB_RCHGTCON = 0;
                 }
 								
-				if(startup_counter_1DB < 600) // During the first 6s of bootup, write GIDS to the max value for the pack
+				if (startup_counter_1DB < 600 && 0) // disable
 				{
 				switch (My_Battery)
 					{
